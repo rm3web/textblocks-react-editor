@@ -1,6 +1,6 @@
 {
   "name": "textblocks-react-editor",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An editor in React for TextBlocks",
   "main": "dist/textblocks_forms.jsx",
   "repository": {
