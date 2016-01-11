@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## 0.0.4 - 2016-1-10
+### Added
+- Using babelify instead of browserify-jsx
+
 ## 0.0.3 - 2016-1-10
 ### Fixed
 - Wrong path in package.json

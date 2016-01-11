@@ -1,6 +1,6 @@
 {
   "name": "textblocks-react-editor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An editor in React for TextBlocks",
   "main": "dist/textblocks_forms.js",
   "repository": {
@@ -17,7 +17,7 @@
   "browserify": {
     "transform": [
       [
-        "browserify-jsx"
+        "babelify"
       ]
     ]
   },
@@ -39,7 +39,6 @@
     "babel-preset-react": "~6.3.13",
     "babel-register": "~6.3.13",
     "babelify": "~7.2.0",
-    "browserify-jsx": "~1.0.0",
     "chai": "~3.4.1",
     "istanbul": "~0.4.1",
     "karma": "~0.13.19",
