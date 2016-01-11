@@ -112,7 +112,7 @@ module.exports = function(config) {
     },
 
     sauceLabs: {
-      testName: 'Linked Data Box Unit Tests',
+      testName: 'Textblocks React Editor Unit Tests',
       tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
       username: process.env.SAUCE_USERNAME,
       accessKey: process.env.SAUCE_ACCESS_KEY,
