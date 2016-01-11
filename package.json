@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "An editor in React for TextBlocks",
   "main": "dist/textblocks_forms.jsx",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rm3web/textblocks-react-editor.git"
+  },
   "scripts": {
     "test": "./node_modules/.bin/mocha --compilers js:babel-register tests/*.js",
     "karma": "./node_modules/.bin/karma start",
@@ -20,6 +24,7 @@
   "author": "Wirehead <wh-npm@wirewd.com>",
   "license": "BSD-2-Clause",
   "dependencies": {
+    "intl": "^1.0.1",
     "react": "~0.14.6",
     "react-addons-linked-state-mixin": "~0.14.6",
     "react-dom": "~0.14.6",
