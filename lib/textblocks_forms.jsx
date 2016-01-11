@@ -1,13 +1,13 @@
+if (!global.Intl) {
+    // No `Intl`, so use and load the polyfill.
+    global.Intl = require('intl');
+}
+
 var React = require('react');
 var ReactIntl = require('react-intl');
 var IntlMixin  = ReactIntl.IntlMixin;
 var FormattedMessage  = ReactIntl.FormattedMessage;
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
-
-if (!global.Intl) {
-    // No `Intl`, so use and load the polyfill.
-    global.Intl = require('intl');
-}
 
 /**
  * @class TextBlockComponent
