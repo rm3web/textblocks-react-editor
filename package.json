@@ -1,8 +1,8 @@
 {
   "name": "textblocks-react-editor",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "An editor in React for TextBlocks",
-  "main": "dist/textblocks_forms.jsx",
+  "main": "dist/textblocks_forms.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:rm3web/textblocks-react-editor.git"
@@ -21,6 +21,10 @@
       ]
     ]
   },
+  "bugs": {
+    "url": "https://github.com/rm3web/textblocks-react-editor/issues"
+  },
+  "homepage": "https://github.com/rm3web/textblocks-react-editor",
   "author": "Wirehead <wh-npm@wirewd.com>",
   "license": "BSD-2-Clause",
   "dependencies": {
