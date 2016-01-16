@@ -8,7 +8,7 @@
     "url": "git@github.com:rm3web/textblocks-react-editor.git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --compilers js:babel-register tests/*.js",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-register --require tests/lib/mocha.js tests/*.js",
     "karma": "./node_modules/.bin/karma start",
     "karma:travis": "./node_modules/.bin/karma start travis.conf.js",
     "travis": "npm run test && npm run karma:travis",
@@ -43,6 +43,7 @@
     "browserify": "^13.0.0",
     "chai": "~3.4.1",
     "istanbul": "~0.4.1",
+    "jsdom": "~3.1.2",
     "karma": "~0.13.19",
     "karma-browserify": "~4.4.2",
     "karma-chrome-launcher": "~0.2.2",
@@ -53,6 +54,7 @@
     "karma-sauce-launcher": "~0.3.0",
     "mocha": "~2.3.4",
     "phantomjs": "~1.9.19",
-    "react-addons-test-utils": "~0.14.6"
+    "react-addons-test-utils": "~0.14.6",
+    "teaspoon": "^6.1.1"
   }
 }
