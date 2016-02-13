@@ -13,7 +13,7 @@
     "karma:travis": "./node_modules/.bin/karma start travis.conf.js",
     "travis": "npm run test && npm run karma:travis",
     "prepublish": "./node_modules/.bin/babel lib -d dist/",
-    "spa": "./node_modules/.bin/browserify spa/bundle.js -o spa/bundle.out.js"
+    "spa": "./node_modules/.bin/budo spa/bundle.js:bundle.out.js --dir spa/ --port 9000 -- -t babelify -p livereactload --port 8000"
   },
   "browserify": {
     "transform": [
@@ -37,10 +37,12 @@
   },
   "devDependencies": {
     "babel-cli": "~6.4.0",
+    "babel-plugin-react-transform": "^2.0.0",
     "babel-preset-react": "~6.3.13",
     "babel-register": "~6.3.13",
     "babelify": "~7.2.0",
     "browserify": "^13.0.0",
+    "budo": "^8.0.4",
     "chai": "~3.4.1",
     "istanbul": "~0.4.1",
     "karma": "~0.13.19",
@@ -51,8 +53,10 @@
     "karma-phantomjs-launcher": "~0.2.3",
     "karma-safari-launcher": "~0.1.1",
     "karma-sauce-launcher": "~0.3.0",
+    "livereactload": "^2.1.1",
     "mocha": "~2.3.4",
     "phantomjs": "~1.9.19",
-    "react-addons-test-utils": "~0.14.6"
+    "react-addons-test-utils": "~0.14.6",
+    "react-proxy": "^1.1.2"
   }
 }
