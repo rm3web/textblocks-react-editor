@@ -94,6 +94,11 @@ var IndexBlockEditor = React.createClass({
             <input type="checkbox" value="true" name={this.props.prefix + '[monthFacet]'}
               checkedLink={this.linkState('monthFacet')} />
         </label>
+        <label htmlFor={this.props.prefix + '[navbar]'} className="pure-checkbox">
+            <FormattedMessage message={this.getIntlMessage('FACETED_BY_TAG')} />
+            <input type="checkbox" value="true" name={this.props.prefix + '[tagFacet]'}
+              checkedLink={this.linkState('tagFacet')} />
+        </label>
         <select name={this.props.prefix + '[partial]'} size="1" 
           valueLink={this.linkState('partial')}>
          <option value="card">Card</option>
