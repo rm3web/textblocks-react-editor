@@ -38,7 +38,7 @@
   "devDependencies": {
     "babel-cli": "~6.6.5",
     "babel-plugin-react-transform": "^2.0.0",
-    "babel-preset-react": "~6.3.13",
+    "babel-preset-react": "~6.5.0",
     "babel-register": "~6.6.5",
     "babelify": "~7.2.0",
     "browserify": "^13.0.0",
