@@ -54,7 +54,7 @@
     "karma-safari-launcher": "~0.1.1",
     "karma-sauce-launcher": "~0.3.0",
     "livereactload": "^2.1.1",
-    "mocha": "~2.3.4",
+    "mocha": "~2.4.5",
     "phantomjs": "~1.9.19",
     "react-addons-test-utils": "~0.14.6",
     "react-proxy": "^2.0.6"
