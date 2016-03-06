@@ -5,9 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Checkbox for facet-by-tag
+- Using budo for live-reload demo page
+
 ### Changed
 - Updated dependencies
 - Moved react to a peer dependency
+- Split checkboxes into two columns
 
 ## [0.0.4] - 2016-1-10
 ### Added
