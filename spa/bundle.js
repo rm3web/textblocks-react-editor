@@ -5,6 +5,7 @@ var TextblockForms = require('../lib/textblocks_forms.jsx');
 var intl = {
   locales: 'en-US',
   messages: {
+    FACETED_BY_TAG: 'Faceted by tag',
     FACETED_BY_MONTH: 'Faceted by month',
     NAVBAR: 'Navbar',
     PAGINATED: 'Paginated'
