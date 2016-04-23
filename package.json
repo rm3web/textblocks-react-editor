@@ -30,7 +30,7 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "intl": "^1.0.1",
-    "react-intl": "1.2.0"
+    "react-intl": "2.0.0"
   },
   "peerDependencies": {
     "react": "~0.14.7",
