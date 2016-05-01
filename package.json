@@ -59,10 +59,10 @@
     "mocha": "~2.4.5",
     "phantomjs-prebuilt": "^2.1.4",
     "react": "~0.14.7",
-    "react-dom": "~0.14.7",
     "react-addons-linked-state-mixin": "~0.14.7",
     "react-addons-test-utils": "~0.14.7",
-    "teaspoon": "^6.2.0",
-    "react-proxy": "^2.0.6"
+    "react-dom": "~0.14.7",
+    "react-proxy": "^2.0.6",
+    "teaspoon": "^6.4.0"
   }
 }
