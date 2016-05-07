@@ -11,7 +11,7 @@
     "test": "./node_modules/.bin/mocha --compilers js:babel-register tests/*.js",
     "karma": "./node_modules/.bin/karma start",
     "karma:travis": "./node_modules/.bin/karma start travis.conf.js",
-    "travis": "npm run test && npm run karma:travis",
+    "travis": "npm run lint && npm run test && npm run karma:travis",
     "prepublish": "./node_modules/.bin/babel lib -d dist/",
     "lint": "./node_modules/.bin/eslint lib tests",
     "spa": "./node_modules/.bin/budo spa/bundle.js:bundle.out.js --dir spa/ --port 9000 -- -t babelify -p livereactload --port 8000"
