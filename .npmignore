@@ -1,7 +1,7 @@
 .DS_Store
 /node_modules
 /lib
-/test
+/tests
 .travis.yml
 travis.conf.js
 karma.conf.js

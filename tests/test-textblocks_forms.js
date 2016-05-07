@@ -1,8 +1,6 @@
-var React = require('react');
-var TestUtils = require('react-addons-test-utils');
 var createComponent = require('./lib/create-component');
 var TextBlockComponent = require('../lib/textblocks_forms.jsx').TextBlockComponent;
-var should = require('chai').should()
+var should = require('chai').should();
 
 var intl = {
   locales: 'en-US',

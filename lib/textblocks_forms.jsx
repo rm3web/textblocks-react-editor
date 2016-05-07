@@ -21,6 +21,7 @@ var LinkedStateMixin = require('react-addons-linked-state-mixin');
  */
 
  var TextBlockEditor = React.createClass({
+  displayName: 'TextBlockEditor',
   mixins: [IntlMixin, LinkedStateMixin],
 
   getInitialState: function() {
