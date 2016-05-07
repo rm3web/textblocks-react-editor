@@ -13,7 +13,7 @@
     "karma:travis": "./node_modules/.bin/karma start travis.conf.js",
     "travis": "npm run test && npm run karma:travis",
     "prepublish": "./node_modules/.bin/babel lib -d dist/",
-    "lint": "./node_modules/.bin/jshint lib tests",
+    "lint": "./node_modules/.bin/eslint lib tests",
     "spa": "./node_modules/.bin/budo spa/bundle.js:bundle.out.js --dir spa/ --port 9000 -- -t babelify -p livereactload --port 8000"
   },
   "browserify": {
@@ -46,8 +46,10 @@
     "browserify": "^13.0.0",
     "budo": "^8.0.4",
     "chai": "~3.5.0",
-    "eslint": "^1.10.3",
-    "eslint-plugin-react": "^3.14.0",
+    "eslint": "^2.9.0",
+    "eslint-plugin-no-only-tests": "^1.1.0",
+    "eslint-plugin-node": "^1.1.0",
+    "eslint-plugin-react": "^5.0.1",
     "istanbul": "~0.4.1",
     "karma": "~0.13.19",
     "karma-browserify": "~5.0.2",
