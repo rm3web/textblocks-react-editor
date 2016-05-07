@@ -1,6 +1,6 @@
 {
   "name": "textblocks-react-editor",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "An editor in React for TextBlocks",
   "main": "dist/textblocks_forms.js",
   "repository": {
@@ -14,7 +14,7 @@
     "travis": "npm run test && npm run karma:travis",
     "prepublish": "./node_modules/.bin/babel lib -d dist/",
     "lint": "./node_modules/.bin/jshint lib tests",
-    "spa": "./node_modules/.bin/browserify spa/bundle.js -o spa/bundle.out.js"
+    "spa": "./node_modules/.bin/budo spa/bundle.js:bundle.out.js --dir spa/ --port 9000 -- -t babelify -p livereactload --port 8000"
   },
   "browserify": {
     "transform": [
@@ -31,31 +31,39 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "intl": "^1.0.1",
-    "react": "~0.14.6",
-    "react-addons-linked-state-mixin": "~0.14.6",
-    "react-dom": "~0.14.6",
     "react-intl": "1.2.0"
   },
+  "peerDependencies": {
+    "react": "~0.14.7",
+    "react-addons-linked-state-mixin": "~0.14.7"
+  },
   "devDependencies": {
-    "babel-cli": "~6.4.0",
-    "babel-preset-react": "~6.3.13",
-    "babel-register": "~6.3.13",
+    "babel-cli": "~6.8.0",
+    "babel-plugin-react-transform": "^2.0.0",
+    "babel-preset-react": "~6.5.0",
+    "babel-register": "~6.8.0",
     "babelify": "~7.2.0",
     "browserify": "^13.0.0",
-    "chai": "~3.4.1",
+    "budo": "^8.0.4",
+    "chai": "~3.5.0",
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.14.0",
     "istanbul": "~0.4.1",
     "karma": "~0.13.19",
-    "karma-browserify": "~4.4.2",
-    "karma-chrome-launcher": "~0.2.2",
-    "karma-firefox-launcher": "~0.1.7",
-    "karma-mocha": "~0.2.1",
-    "karma-phantomjs-launcher": "~0.2.3",
-    "karma-safari-launcher": "~0.1.1",
-    "karma-sauce-launcher": "~0.3.0",
-    "mocha": "~2.3.4",
-    "phantomjs": "~1.9.19",
-    "react-addons-test-utils": "~0.14.6"
+    "karma-browserify": "~5.0.2",
+    "karma-chrome-launcher": "~1.0.1",
+    "karma-firefox-launcher": "~1.0.0",
+    "karma-mocha": "~1.0.1",
+    "karma-phantomjs-launcher": "~1.0.0",
+    "karma-safari-launcher": "~1.0.0",
+    "karma-sauce-launcher": "~1.0.0",
+    "livereactload": "^2.1.1",
+    "mocha": "~2.4.5",
+    "phantomjs-prebuilt": "^2.1.4",
+    "react": "~0.14.7",
+    "react-dom": "~0.14.7",
+    "react-addons-linked-state-mixin": "~0.14.7",
+    "react-addons-test-utils": "~0.14.7",
+    "react-proxy": "^2.0.6"
   }
 }

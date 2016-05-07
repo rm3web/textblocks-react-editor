@@ -80,23 +80,33 @@ var IndexBlockEditor = React.createClass({
          <option value="changed">By most recently changed</option>
          <option value="created">By most recently created</option>
         </select>
-        <label htmlFor={this.props.prefix + '[navbar]'} className="pure-checkbox">
-            <FormattedMessage message={this.getIntlMessage('NAVBAR')} />
-            <input type="checkbox" value="true" name={this.props.prefix + '[navbar]'}
-              checkedLink={this.linkState('navbar')} />
-        </label>
-        <label htmlFor={this.props.prefix + '[pagination]'} className="pure-checkbox">
-            <FormattedMessage message={this.getIntlMessage('PAGINATED')} />
-            <input type="checkbox" value="true" name={this.props.prefix + '[pagination]'}
-              checkedLink={this.linkState('pagination')} />
-        </label>
-        <label htmlFor={this.props.prefix + '[navbar]'} className="pure-checkbox">
-            <FormattedMessage message={this.getIntlMessage('FACETED_BY_MONTH')} />
-            <input type="checkbox" value="true" name={this.props.prefix + '[monthFacet]'}
-              checkedLink={this.linkState('monthFacet')} />
-        </label>
-        <select name={this.props.prefix + '[partial]'} size="1" 
-          valueLink={this.linkState('partial')}>
+        <div className="pure-g">
+          <div className="pure-u-1-2">
+            <label htmlFor={this.props.prefix + '[navbar]'} className="pure-checkbox">
+              <input type="checkbox" value="true" name={this.props.prefix + '[navbar]'}
+                checkedLink={this.linkState('navbar')} />
+                <FormattedMessage message={this.getIntlMessage('NAVBAR')} />
+            </label>
+            <label htmlFor={this.props.prefix + '[pagination]'} className="pure-checkbox">
+              <input type="checkbox" value="true" name={this.props.prefix + '[pagination]'}
+                checkedLink={this.linkState('pagination')} />
+              <FormattedMessage message={this.getIntlMessage('PAGINATED')} />
+            </label>
+          </div>
+          <div className="pure-u-1-2">
+            <label htmlFor={this.props.prefix + '[navbar]'} className="pure-checkbox">
+              <input type="checkbox" value="true" name={this.props.prefix + '[monthFacet]'}
+                checkedLink={this.linkState('monthFacet')} />
+              <FormattedMessage message={this.getIntlMessage('FACETED_BY_MONTH')} />
+            </label>
+            <label htmlFor={this.props.prefix + '[navbar]'} className="pure-checkbox">
+              <input type="checkbox" value="true" name={this.props.prefix + '[tagFacet]'}
+              checkedLink={this.linkState('tagFacet')} />
+              <FormattedMessage message={this.getIntlMessage('FACETED_BY_TAG')} />
+            </label>
+          </div>
+        </div>
+        <select name={this.props.prefix + '[partial]'} size="1" valueLink={this.linkState('partial')}>
          <option value="card">Card</option>
          <option value="list">List</option>
          <option value="grid">Grid</option>
