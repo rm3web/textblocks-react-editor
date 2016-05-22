@@ -8,7 +8,7 @@
     "url": "git@github.com:rm3web/textblocks-react-editor.git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --compilers js:babel-register tests/*.js",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-register --require tests/lib/mocha.js tests/*.js",
     "karma": "./node_modules/.bin/karma start",
     "karma:travis": "./node_modules/.bin/karma start travis.conf.js",
     "travis": "npm run lint && npm run test && npm run karma:travis",
@@ -51,6 +51,7 @@
     "eslint-plugin-node": "^1.1.0",
     "eslint-plugin-react": "^5.0.1",
     "istanbul": "~0.4.1",
+    "jsdom": "~3.1.2",
     "karma": "~0.13.19",
     "karma-browserify": "~5.0.2",
     "karma-chrome-launcher": "~1.0.1",
@@ -63,9 +64,10 @@
     "mocha": "~2.4.5",
     "phantomjs-prebuilt": "^2.1.4",
     "react": "~0.14.7",
-    "react-dom": "~0.14.7",
     "react-addons-linked-state-mixin": "~0.14.7",
     "react-addons-test-utils": "~0.14.7",
-    "react-proxy": "^2.0.6"
+    "react-dom": "~0.14.7",
+    "react-proxy": "^2.0.6",
+    "teaspoon": "^6.4.0"
   }
 }
