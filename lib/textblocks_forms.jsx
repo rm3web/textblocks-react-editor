@@ -8,6 +8,7 @@ var ReactIntl = require('react-intl');
 var IntlMixin  = ReactIntl.IntlMixin;
 var FormattedMessage  = ReactIntl.FormattedMessage;
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
+var Textarea = require('react-textarea-autosize').default; 
 
 /**
  * @class TextBlockComponent
@@ -39,10 +40,10 @@ var LinkedStateMixin = require('react-addons-linked-state-mixin');
         vlink = 'htmltext';
       }
       return (<fieldset>
-        <textarea rows="30" name={this.props.prefix + '[source]'}
+        <Textarea name={this.props.prefix + '[source]'}
           className="pure-input-1" placeholder="Posting" 
           valueLink={this.linkState(vlink)}>
-        </textarea>
+        </Textarea>
         <select size="1" name={this.props.prefix + '[format]'}
           valueLink={this.linkState('format')}>
         <option value="html">HTML</option>
