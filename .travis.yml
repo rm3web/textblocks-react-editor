@@ -1,15 +1,23 @@
 language: node_js
 node_js:
-  - "0.12"
-  - "4"
-  - "5"
+- '4'
+- '5'
 env:
-  - CXX=g++-4.8
+- CXX=g++-4.8
 addons:
   sauce_connect: true
   apt:
     sources:
-      - ubuntu-toolchain-r-test
+    - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
-script: "npm run travis"
+    - g++-4.8
+script: npm run travis
+deploy:
+  provider: npm
+  email: wh-npm@wirewd.com
+  api_key:
+    secure: X6he8qsQLAa38cwUAqGPPh/Sqgsbd2pmgt6Ohj+eYvG4rb0BIrctPqt42Cz35e918Qr6AbscDWEq0q7uPux/7WZBhWiNj8iMrqW7/Ho3IgI24CviSatPb3vvAhO/rA/juWXRPcd+LTDubTnB9lENPZ0Y3FcSNHr4zf+Sh4rxf+65Nci77bEyC30Ee6GCevH9Lt9AUj75MZC8zdXAJfYzu8CTE7gL1UQcfU3VV6mT7Gx99wGcUcoeEiFKgceg44qzubtmnWLV+l5O3ysVP7cKRHxxwNY/+VG500I3skvNK7RwoctFDDqy64sOjRG3bGHE0LlDjlKFgfLZMJxUKWGqd3175DR0Wx8BOrNQPBX6qajamABqHSbzim7WrtQJxKvsFwTJ8EF6C9uIQv1TdGsA3NSfiLuR9bQp2pmrshI4bliYj3ENypL1YN6hsg45diizXK1TAhcYOTfX3COFvbPVJHf4PQ25PKJeglOoZWYn0AXYUWb0CV/UFdteb+LtBtzZxCExtkz+uTJuSb1jJWrD2bb0qsIbdFC/nQ0GQdewLlGyi5DacGbaCGAC6wQlQqG+Sk24HgUgKDwxuMl/hqvkflwlzxxqIAobTs/IULtjL476igHUxpqdVptumvM3xLdtC7XfOclCHfkLlhvt+RoRbzwXgcvsOM2A90cYyIwSAo0=
+  on:
+    tags: true
+    repo: rm3web/textblocks-react-editor
+    node: '4'
