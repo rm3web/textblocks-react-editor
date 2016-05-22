@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Updated deps
 - Proper lint
+- Autosized text areas
 
 ### Changed
 - updated to work with textblocks 0.0.10 (no more htmltext field)
