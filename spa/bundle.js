@@ -14,9 +14,8 @@ var intl = {
 
 var block = {"blocks":
       [{source:"# humans make good pets",
-        htmltext:"<h1>humans make good pets</h1>",
         format:"markdown"},
-        {htmltext:"<strong>html section</strong>",
+        {source:"<strong>html section</strong>",
         format:"html"}],
       format:"section"}
 

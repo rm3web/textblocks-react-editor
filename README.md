@@ -8,7 +8,6 @@ A very very rough editor for [textblocks](https://www.npmjs.com/package/textbloc
 
 * `npm run spa` to test
 * `npm run lint` to lint
-* `npm run benchmark` to check the benchmarks
 * `npm test` to test
 
 If you've found a bug:

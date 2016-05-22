@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Updated deps
+- Proper lint
+
+### Changed
+- updated to work with textblocks 0.0.10 (no more htmltext field)
 
 ## [0.0.5] - 2016-3-05
 ### Added
