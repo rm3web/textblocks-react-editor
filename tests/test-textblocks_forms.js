@@ -39,9 +39,8 @@ describe('TextBlockComponent', function() {
       prefix: 'plastic_makes_perfect',
       block: {"blocks":
       [{source:"# humans make good pets",
-        htmltext:"<h1>humans make good pets</h1>",
         format:"markdown"},
-        {htmltext:"<strong>html section</strong>",
+        {source:"<strong>html section</strong>",
         format:"html"}],
       format:"section"}
     });
@@ -56,13 +55,12 @@ describe('TextBlockComponent', function() {
     blocklist[0].type.should.equal('div');
     blocklist[0].props.children.props.prefix.should.equal('plastic_makes_perfect[blocks][0]');
     blocklist[0].props.children.props.block.should.eql({source:"# humans make good pets",
-        htmltext:"<h1>humans make good pets</h1>",
         format:"markdown"});
     blocklist[0].key.should.equal('0');
 
     blocklist[1].type.should.equal('div');
     blocklist[1].props.children.props.prefix.should.equal('plastic_makes_perfect[blocks][1]');
-    blocklist[1].props.children.props.block.should.eql({htmltext:"<strong>html section</strong>",
+    blocklist[1].props.children.props.block.should.eql({source:"<strong>html section</strong>",
         format:"html"});
     blocklist[1].key.should.equal('1');
   });

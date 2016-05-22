@@ -35,9 +35,6 @@ var LinkedStateMixin = require('react-addons-linked-state-mixin');
   render: function() {
     if (this.state.format !== 'pragma') {
       var vlink = 'source';
-      if (this.state.format === 'html') {
-        vlink = 'htmltext';
-      }
       return (<fieldset>
         <textarea rows="30" name={this.props.prefix + '[source]'}
           className="pure-input-1" placeholder="Posting" 
