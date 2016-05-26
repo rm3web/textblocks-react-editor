@@ -30,7 +30,7 @@
   "author": "Wirehead <wh-npm@wirewd.com>",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "intl": "^1.0.1",
+    "intl": "^1.2.4",
     "react-intl": "1.2.0",
     "react-textarea-autosize": "^4.0.2"
   },
