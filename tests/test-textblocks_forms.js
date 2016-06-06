@@ -17,7 +17,7 @@ describe('TextBlockComponent', function() {
       locales: intl.locales,
       messages: intl.messages,
       prefix: 'plastic_makes_perfect'
-    });
+    }).props.children;
 
     form.type.should.equal('fieldset');
 
@@ -43,7 +43,7 @@ describe('TextBlockComponent', function() {
         {source:"<strong>html section</strong>",
         format:"html"}],
       format:"section"}
-    });
+    }).props.children;
 
     form.type.should.equal('fieldset');
 
