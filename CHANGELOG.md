@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.0.7] - 2016-6-12
+### Changed
+- Updated dependencies, including fairly severe change with react-intl.
+
 ## [0.0.6] - 2016-5-21
 ### Added
 - Updated deps
@@ -39,7 +43,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - New project
 
-[Unreleased]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.6...HEAD
+[Unreleased]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.7...HEAD
+[0.0.7]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.6...v0.0.7
 [0.0.6]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.5...v0.0.6
 [0.0.5]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.4...v0.0.5
 [0.0.4]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.3...v0.0.4
