@@ -52,7 +52,7 @@
     "eslint-plugin-node": "^1.1.0",
     "eslint-plugin-react": "^5.0.1",
     "istanbul": "~0.4.1",
-    "karma": "~0.13.19",
+    "karma": "~1.0.0",
     "karma-browserify": "~5.0.2",
     "karma-chrome-launcher": "~1.0.1",
     "karma-firefox-launcher": "~1.0.0",
