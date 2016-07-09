@@ -5,9 +5,10 @@ if (!global.Intl) {
 
 var React = require('react');
 var ReactIntl = require('react-intl');
-var IntlMixin  = ReactIntl.IntlMixin;
+var IntlProvider = ReactIntl.IntlProvider;
 var FormattedMessage  = ReactIntl.FormattedMessage;
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
+var Textarea = require('react-textarea-autosize').default; 
 
 /**
  * @class TextBlockComponent
@@ -22,7 +23,7 @@ var LinkedStateMixin = require('react-addons-linked-state-mixin');
 
  var TextBlockEditor = React.createClass({
   displayName: 'TextBlockEditor',
-  mixins: [IntlMixin, LinkedStateMixin],
+  mixins: [LinkedStateMixin],
 
   getInitialState: function() {
     if (this.props.block) {
@@ -35,14 +36,11 @@ var LinkedStateMixin = require('react-addons-linked-state-mixin');
   render: function() {
     if (this.state.format !== 'pragma') {
       var vlink = 'source';
-      if (this.state.format === 'html') {
-        vlink = 'htmltext';
-      }
       return (<fieldset>
-        <textarea rows="30" name={this.props.prefix + '[source]'}
+        <Textarea name={this.props.prefix + '[source]'}
           className="pure-input-1" placeholder="Posting" 
           valueLink={this.linkState(vlink)}>
-        </textarea>
+        </Textarea>
         <select size="1" name={this.props.prefix + '[format]'}
           valueLink={this.linkState('format')}>
         <option value="html">HTML</option>
@@ -54,7 +52,7 @@ var LinkedStateMixin = require('react-addons-linked-state-mixin');
 });
 
 var IndexBlockEditor = React.createClass({
-  mixins: [IntlMixin, LinkedStateMixin],
+  mixins: [LinkedStateMixin],
 
   getInitialState: function() {
     if (this.props.block) {
@@ -85,24 +83,24 @@ var IndexBlockEditor = React.createClass({
             <label htmlFor={this.props.prefix + '[navbar]'} className="pure-checkbox">
               <input type="checkbox" value="true" name={this.props.prefix + '[navbar]'}
                 checkedLink={this.linkState('navbar')} />
-                <FormattedMessage message={this.getIntlMessage('NAVBAR')} />
+                <FormattedMessage id="NAVBAR" defaultMessage="Navbar" />
             </label>
             <label htmlFor={this.props.prefix + '[pagination]'} className="pure-checkbox">
               <input type="checkbox" value="true" name={this.props.prefix + '[pagination]'}
                 checkedLink={this.linkState('pagination')} />
-              <FormattedMessage message={this.getIntlMessage('PAGINATED')} />
+              <FormattedMessage id="PAGINATED" defaultMessage="Paginated" />
             </label>
           </div>
           <div className="pure-u-1-2">
             <label htmlFor={this.props.prefix + '[navbar]'} className="pure-checkbox">
               <input type="checkbox" value="true" name={this.props.prefix + '[monthFacet]'}
                 checkedLink={this.linkState('monthFacet')} />
-              <FormattedMessage message={this.getIntlMessage('FACETED_BY_MONTH')} />
+              <FormattedMessage id="FACETED_BY_MONTH" defaultMessage="Faceted By Month" />
             </label>
             <label htmlFor={this.props.prefix + '[navbar]'} className="pure-checkbox">
               <input type="checkbox" value="true" name={this.props.prefix + '[tagFacet]'}
               checkedLink={this.linkState('tagFacet')} />
-              <FormattedMessage message={this.getIntlMessage('FACETED_BY_TAG')} />
+              <FormattedMessage id="FACETED_BY_TAG" defaultMessage="Faceted By Tag" />
             </label>
           </div>
         </div>
@@ -129,7 +127,7 @@ function mapBlock(block, i, prefix) {
 }
 
 var TextBlockComponent = React.createClass({
-  mixins: [IntlMixin, LinkedStateMixin],
+  mixins: [LinkedStateMixin],
 
   getInitialState: function() {
     if (this.props.block) {
@@ -188,12 +186,12 @@ var TextBlockComponent = React.createClass({
             {outBlock}
             </div>);
         });
-      return (<fieldset>
+      return (<IntlProvider messages={this.props.messages} locale='en'><fieldset>
         <input type="hidden" value="section" name={this.props.prefix + '[format]'}
           id={this.props.prefix + '[format]'} />
         {blocks}
         {buttons}
-      </fieldset>);
+      </fieldset></IntlProvider>);
     } else {
       var block;
       if (this.state.format === 'pragma') {
@@ -205,10 +203,10 @@ var TextBlockComponent = React.createClass({
         prefix={this.props.prefix}
         block={this.state} child="false" />);
       }
-      return (<fieldset>
+      return ( <IntlProvider messages={this.props.messages} locale='en'><fieldset>
         {block}
         {buttons}
-      </fieldset>);
+      </fieldset></IntlProvider>);
     }
   }
 });
