@@ -34,7 +34,7 @@ var Textarea = require('react-textarea-autosize').default;
   },
 
   render: function() {
-    if (this.state.format !== 'pragma') {
+    if (this.state.format !== 'indexfeed') {
       var vlink = 'source';
       return (<fieldset>
         <Textarea name={this.props.prefix + '[source]'}
@@ -63,9 +63,9 @@ var IndexBlockEditor = React.createClass({
   },
 
   render: function() {
-    if (this.state.format === 'pragma') {
+    if (this.state.format === 'indexfeed') {
       return (<fieldset>
-        <input type="hidden" value="pragma" name={this.props.prefix + '[format]'} />
+        <input type="hidden" value="indexfeed" name={this.props.prefix + '[format]'} />
         <select name={this.props.prefix + '[query]'} size="1" 
           valueLink={this.linkState('query')}>
          <option value="child">Query Children (Including this page and all descendents)</option>
@@ -115,7 +115,7 @@ var IndexBlockEditor = React.createClass({
 });
 
 function mapBlock(block, i, prefix) {
-  if (block.format === 'pragma') {
+  if (block.format === 'indexfeed') {
     return (<IndexBlockEditor key={'b_' + i}
     prefix={prefix + '[blocks][' + i + ']'}
     block={block} child="true" />);
@@ -159,7 +159,7 @@ var TextBlockComponent = React.createClass({
       blocks = [this.state];
     }
     blocks.push({query:"parents",
-      format:"pragma"});
+      format:"indexfeed"});
     this.setState({blocks: blocks,
       format: 'section'});
   },
@@ -194,7 +194,7 @@ var TextBlockComponent = React.createClass({
       </fieldset></IntlProvider>);
     } else {
       var block;
-      if (this.state.format === 'pragma') {
+      if (this.state.format === 'indexfeed') {
         block = (<IndexBlockEditor
         prefix={this.props.prefix}
         block={this.state} child="false" />);

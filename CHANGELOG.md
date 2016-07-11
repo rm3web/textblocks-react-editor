@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Updated dependencies
+- Changed from `pragma` to `indexfeed` for the query.
 
 ## [0.0.7] - 2016-6-12
 ### Changed
@@ -10,11 +13,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.0.6] - 2016-5-21
 ### Added
-- Updated deps
 - Proper lint
 - Autosized text areas
 
 ### Changed
+- Updated deps
 - updated to work with textblocks 0.0.10 (no more htmltext field)
 
 ## [0.0.5] - 2016-3-05
