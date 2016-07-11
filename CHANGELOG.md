@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.0.8] - 2016-7-10
 ### Changed
 - Updated dependencies
 - Changed from `pragma` to `indexfeed` for the query.
@@ -46,7 +48,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - New project
 
-[Unreleased]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.7...HEAD
+[Unreleased]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.8...HEAD
+[0.0.7]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.7...v0.0.8
 [0.0.7]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.6...v0.0.7
 [0.0.6]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.5...v0.0.6
 [0.0.5]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.4...v0.0.5
