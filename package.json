@@ -39,7 +39,7 @@
     "react-addons-linked-state-mixin": "~0.14.7"
   },
   "devDependencies": {
-    "babel-cli": "~6.10.0",
+    "babel-cli": "~6.11.4",
     "babel-plugin-react-transform": "^2.0.0",
     "babel-preset-react": "~6.11.0",
     "babel-register": "~6.9.0",
