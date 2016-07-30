@@ -90,6 +90,8 @@ var IndexBlockEditor = React.createClass({
                 checkedLink={this.linkState('pagination')} />
               <FormattedMessage id="PAGINATED" defaultMessage="Paginated" />
             </label>
+              <input type="text" valueLink={this.linkState('perPage')} 
+                name={this.props.prefix + '[perPage]'} disabled={!this.state.pagination} />
           </div>
           <div className="pure-u-1-2">
             <label htmlFor={this.props.prefix + '[navbar]'} className="pure-checkbox">
