@@ -1,6 +1,6 @@
 # Text Blocks React Editor
 
-[![Build Status](https://travis-ci.org/rm3web/textblocks-react-editor.svg)](https://travis-ci.org/rm3web/textblocks-react-editor)[![Dependency Status](https://david-dm.org/rm3web/textblocks-react-editor.svg)](https://david-dm.org/rm3web/textblocks-react-editor)[![devDependency Status](https://david-dm.org/rm3web/textblocks-react-editor/dev-status.svg)](https://david-dm.org/rm3web/textblocks-react-editor#info=devDependencies)[![peerDependency Status](https://david-dm.org/rm3web/textblocks-react-editor/peer-status.svg)](https://david-dm.org/rm3web/textblocks-react-editor#info=peerDependencies)
+[![Build Status](https://travis-ci.org/rm3web/textblocks-react-editor.svg)](https://travis-ci.org/rm3web/textblocks-react-editor)[![Dependency Status](https://david-dm.org/rm3web/textblocks-react-editor.svg)](https://david-dm.org/rm3web/textblocks-react-editor)[![devDependency Status](https://david-dm.org/rm3web/textblocks-react-editor/dev-status.svg)](https://david-dm.org/rm3web/textblocks-react-editor#info=devDependencies)[![peerDependency Status](https://david-dm.org/rm3web/textblocks-react-editor/peer-status.svg)](https://david-dm.org/rm3web/textblocks-react-editor#info=peerDependencies)[![npm version](https://badge.fury.io/js/textblocks-react-editor.svg)](https://badge.fury.io/js/textblocks-react-editor)
 
 A very very rough editor for [textblocks](https://www.npmjs.com/package/textblocks).
 
