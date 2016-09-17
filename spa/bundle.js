@@ -5,9 +5,11 @@ var TextblockForms = require('../lib/textblocks_forms.jsx');
 var intl = {
   locales: 'en-US',
   messages: {
+    CHILD_PATH: 'Child path',
     FACETED_BY_TAG: 'Faceted by tag',
     FACETED_BY_MONTH: 'Faceted by month',
     NAVBAR: 'Navbar',
+    SELECT_PROTO: 'Select Proto',
     PAGINATED: 'Paginated'
   }
 };
