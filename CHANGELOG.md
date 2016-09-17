@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.0.10] - 2016-9-17
+### Added
+- Added a field for child path and proto selection
+
+### Changed
+- Updated dependencies
+
 ## [0.0.9] - 2016-7-30
 ### Added
 - Added a field for how many items per page.

@@ -111,6 +111,22 @@ var IndexBlockEditor = React.createClass({
          <option value="list">List</option>
          <option value="grid">Grid</option>
         </select>
+        <div className="pure-g">
+          <div className="pure-u-1-2">
+            <label htmlFor={this.props.prefix + '[child]'}>
+            <FormattedMessage id="CHILD_PATH" defaultMessage="Child path" />
+            </label>
+            <input type="text" valueLink={this.linkState('child')} 
+              name={this.props.prefix + '[child]'} />
+          </div>
+          <div className="pure-u-1-2">
+          <label htmlFor={this.props.prefix + '[child]'}>
+            <FormattedMessage id="SELECT_PROTO" defaultMessage="Select proto" />
+            </label>
+            <input type="text" valueLink={this.linkState('proto')} 
+              name={this.props.prefix + '[proto]'} />
+          </div>
+        </div>
       </fieldset>);
     }
   }
