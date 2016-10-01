@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Added options for masonry and justified layouts
 
 ## [0.0.10] - 2016-9-17
 ### Added

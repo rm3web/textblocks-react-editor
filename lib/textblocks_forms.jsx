@@ -110,6 +110,8 @@ var IndexBlockEditor = React.createClass({
          <option value="card">Card</option>
          <option value="list">List</option>
          <option value="grid">Grid</option>
+         <option value="masonry">Masonry</option>
+         <option value="justified">Justified</option>
         </select>
         <div className="pure-g">
           <div className="pure-u-1-2">
