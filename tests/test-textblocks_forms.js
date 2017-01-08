@@ -40,8 +40,8 @@ describe('TextBlockComponent', function() {
       block: {"blocks":
       [{source:"# humans make good pets",
         format:"markdown"},
-        {source:"<strong>html section</strong>",
-          format:"html"}],
+      {source:"<strong>html section</strong>",
+        format:"html"}],
         format:"section"}
     }).props.children;
 

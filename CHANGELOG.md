@@ -7,7 +7,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Updated dependencies
 - Fixed a few lint issues
 
-
 ## [0.0.11] - 2016-10-01
 ### Added
 - Added options for masonry and justified layouts
