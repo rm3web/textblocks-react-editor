@@ -63,7 +63,7 @@
     "livereactload": "^3.0.0",
     "mocha": "~3.2.0",
     "phantomjs-prebuilt": "^2.1.4",
-    "react": "~0.14.7",
+    "react": "~15.4.2",
     "react-dom": "~0.14.7",
     "react-addons-linked-state-mixin": "~0.14.7",
     "react-addons-test-utils": "~0.14.7",
