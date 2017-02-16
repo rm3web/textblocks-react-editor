@@ -1,6 +1,6 @@
 {
   "name": "textblocks-react-editor",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "An editor in React for TextBlocks",
   "main": "dist/textblocks_forms.js",
   "repository": {
@@ -31,12 +31,12 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "intl": "^1.2.4",
-    "react-intl": "2.1.5",
+    "react-intl": "2.2.3",
     "react-textarea-autosize": "^4.0.2"
   },
   "peerDependencies": {
-    "react": "~0.14.7",
-    "react-addons-linked-state-mixin": "~0.14.7"
+    "react": "~0.14.7 || ~15",
+    "react-addons-linked-state-mixin": "~0.14.7 || ~15"
   },
   "devDependencies": {
     "babel-cli": "~6.23.0",
@@ -63,10 +63,10 @@
     "livereactload": "^3.0.0",
     "mocha": "~3.2.0",
     "phantomjs-prebuilt": "^2.1.4",
-    "react": "~0.14.7",
-    "react-dom": "~0.14.7",
-    "react-addons-linked-state-mixin": "~0.14.7",
-    "react-addons-test-utils": "~0.14.7",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-addons-linked-state-mixin": "15.4.2",
+    "react-addons-test-utils": "15.4.2",
     "react-proxy": "^2.0.6"
   }
 }
