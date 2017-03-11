@@ -50,9 +50,9 @@ var IndexBlockEditor = React.createClass({
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name.replace(this.props.prefix, '').substr(1).slice(0, -1);
-    this.setState({
-      [name]: value
-    });
+    var partialState = {};
+    partialState[name] = value;
+    this.setState(partialState);
   },
 
   render: function() {
