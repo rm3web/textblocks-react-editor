@@ -7,8 +7,8 @@ var React = require('react');
 var ReactIntl = require('react-intl');
 var IntlProvider = ReactIntl.IntlProvider;
 var FormattedMessage  = ReactIntl.FormattedMessage;
-var TextBlockEditor = require('./TextBlockEditor.jsx');
-var IndexBlockEditor = require('./IndexBlockEditor.jsx');
+var TextBlockEditor = require('./TextBlockEditor');
+var IndexBlockEditor = require('./IndexBlockEditor');
 
 /**
  * @class TextBlockComponent

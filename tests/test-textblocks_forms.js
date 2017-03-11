@@ -1,5 +1,5 @@
 var createComponent = require('./lib/create-component');
-var TextBlockComponent = require('../lib/textblocks_forms.jsx').TextBlockComponent;
+var TextBlockComponent = require('../lib/index.jsx').TextBlockComponent;
 var should = require('chai').should();
 
 var intl = {

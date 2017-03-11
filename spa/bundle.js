@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var TextblockForms = require('../lib/textblocks_forms.jsx');
+var TextblockForms = require('../lib/index.jsx');
 
 var intl = {
   locales: 'en-US',
