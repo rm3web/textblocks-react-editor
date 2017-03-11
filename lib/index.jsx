@@ -1,6 +1,6 @@
 if (!global.Intl) {
-    // No `Intl`, so use and load the polyfill.
-    global.Intl = require('intl');
+  // No `Intl`, so use and load the polyfill.
+  global.Intl = require('intl');
 }
 
 var React = require('react');
