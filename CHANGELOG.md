@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Removed LinkedStateMixin (it's going away in React 16)
+- Added property validation.
 
 ## [0.0.12] - 2017-02-16
 ### Changed
