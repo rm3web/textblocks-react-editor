@@ -21,18 +21,6 @@ var IndexBlockEditor = require('./IndexBlockEditor');
  * @member {Object} block A Textblock.
  */
 
-function mapBlock(block, i, prefix) {
-  if (block.format === 'indexfeed') {
-    return (<IndexBlockEditor key={'b_' + i}
-    prefix={prefix + '[blocks][' + i + ']'}
-    block={block} child="true" />);
-  } else {
-    return (<TextBlockEditor key={'b_' + i}
-    prefix={prefix + '[blocks][' + i + ']'}
-    block={block} child="true" />);
-  }
-}
-
 var TextBlockComponent = React.createClass({
   getInitialState: function() {
     if (this.props.block) {
@@ -69,6 +57,21 @@ var TextBlockComponent = React.createClass({
       format: 'section'});
   },
 
+  handleUpdateBase: function (key, val) {
+    this.setState({[key]: val});
+  },
+
+  handleUpdate: function (block, key, val) {
+    var blocks;
+    if (this.state.format === 'section') {
+      blocks = this.state.blocks;
+    } else {
+      blocks = [this.state];
+    }
+    blocks[block][key] = val;
+    this.setState({blocks:blocks});
+  },
+
   render: function() {
     var buttons;
     if (this.props.proto === 'index') {
@@ -86,7 +89,15 @@ var TextBlockComponent = React.createClass({
       var self = this;
       var blocks = this.state.blocks.map(function(block, i) {
           var outBlock;
-          outBlock = mapBlock(block, i, self.props.prefix);
+          if (block.format === 'indexfeed') {
+            outBlock = (<IndexBlockEditor key={'b_' + i}
+            prefix={self.props.prefix + '[blocks][' + i + ']'}
+            block={block} handleUpdate={self.handleUpdate.bind(self, i)}/>);
+          } else {
+            outBlock = (<TextBlockEditor key={'b_' + i}
+            prefix={self.props.prefix + '[blocks][' + i + ']'}
+            block={block} handleUpdate={self.handleUpdate.bind(self, i)} />);
+          }
           return (<div key={i} className="textblockbox">
             {outBlock}
             </div>);
@@ -102,11 +113,11 @@ var TextBlockComponent = React.createClass({
       if (this.state.format === 'indexfeed') {
         block = (<IndexBlockEditor
         prefix={this.props.prefix}
-        block={this.state} child="false" />);
+        block={this.state} handleUpdate={this.handleUpdateBase} child="false" />);
       } else {
         block = (<TextBlockEditor
         prefix={this.props.prefix}
-        block={this.state} child="false" />);
+        block={this.state} handleUpdate={this.handleUpdateBase} child="false" />);
       }
       return ( <IntlProvider messages={this.props.messages} locale='en'><fieldset>
         {block}
