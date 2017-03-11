@@ -2,7 +2,7 @@
   "name": "textblocks-react-editor",
   "version": "0.0.12",
   "description": "An editor in React for TextBlocks",
-  "main": "dist/textblocks_forms.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:rm3web/textblocks-react-editor.git"
