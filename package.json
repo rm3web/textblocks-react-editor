@@ -35,7 +35,7 @@
     "react-textarea-autosize": "^4.0.2"
   },
   "peerDependencies": {
-    "react": "~0.14.7 || ~15",
+    "react": "~0.14.7 || ~15"
   },
   "devDependencies": {
     "babel-cli": "~6.23.0",
