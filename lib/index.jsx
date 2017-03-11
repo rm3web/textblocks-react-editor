@@ -58,7 +58,9 @@ var TextBlockComponent = React.createClass({
   },
 
   handleUpdateBase: function (key, val) {
-    this.setState({[key]: val});
+    var partialState = {};
+    partialState[key] = value;
+    this.setState(partialState);
   },
 
   handleUpdate: function (block, key, val) {
