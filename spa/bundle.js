@@ -21,12 +21,18 @@ var block = {"blocks":
         format:"html"}],
       format:"section"}
 
+var block2 = {source:"# humans make good pets",
+        format:"markdown"};
+
 ReactDOM.render(
   <div>
     <h2>Textblock Control</h2>
     <form id="draft" id="userform-form" method="post" className="pure-form pure-form-stacked">
     <TextblockForms.TextBlockComponent locales={intl.locales} messages={intl.messages}
        prefix="posting" proto="index" block={block} />
+    <hr />
+    <TextblockForms.TextBlockComponent locales={intl.locales} messages={intl.messages}
+       prefix="posting" proto="index" block={block2} />
     </form>
   </div>
   ,

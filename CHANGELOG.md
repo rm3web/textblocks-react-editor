@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Removed LinkedStateMixin (it's going away in React 16)
 - Added property validation.
+- Redid the paths to make smaller modules
+- Rewrite the way data flows in the control to be more react-friendly (I was learning React while I wrote this, forgive me if it went astray...)
 
 ## [0.0.12] - 2017-02-16
 ### Changed
