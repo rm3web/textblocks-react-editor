@@ -57,6 +57,13 @@ var TextBlockComponent = React.createClass({
       format: 'section'});
   },
 
+ deleteBlock: function(i,e) {
+    e.preventDefault();
+    var blocks = this.state.blocks;
+    blocks.splice(i,1);
+    this.setState({blocks: blocks});
+  },
+
   handleUpdateBase: function (key, val) {
     var partialState = {};
     partialState[key] = value;
@@ -90,7 +97,11 @@ var TextBlockComponent = React.createClass({
     if (this.state.format === 'section') {
       var self = this;
       var blocks = this.state.blocks.map(function(block, i) {
-          var outBlock;
+          var topButton, outBlock;
+          if (i !== 0) {
+            topButton = (<div style={{'font-size': '6pt', 'background': '#eee'}}><button key={'x_' + i} 
+              onClick={self.deleteBlock.bind(self,i)} className="pure-button">✖</button></div>);
+          }
           if (block.format === 'indexfeed') {
             outBlock = (<IndexBlockEditor key={'b_' + i}
             prefix={self.props.prefix + '[blocks][' + i + ']'}
@@ -101,6 +112,7 @@ var TextBlockComponent = React.createClass({
             block={block} handleUpdate={self.handleUpdate.bind(self, i)} />);
           }
           return (<div key={i} className="textblockbox">
+            {topButton}
             {outBlock}
             </div>);
         });
