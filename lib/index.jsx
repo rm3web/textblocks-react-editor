@@ -99,8 +99,8 @@ var TextBlockComponent = React.createClass({
       var blocks = this.state.blocks.map(function(block, i) {
           var topButton, outBlock;
           if (i !== 0) {
-            topButton = (<button key={'x_' + i} 
-              onClick={self.deleteBlock.bind(self,i)}>x</button>);
+            topButton = (<div style={{'font-size': '6pt', 'background': '#eee'}}><button key={'x_' + i} 
+              onClick={self.deleteBlock.bind(self,i)} className="pure-button">✖</button></div>);
           }
           if (block.format === 'indexfeed') {
             outBlock = (<IndexBlockEditor key={'b_' + i}
