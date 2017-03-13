@@ -38,7 +38,7 @@
     "react": "~0.14.7 || ~15"
   },
   "devDependencies": {
-    "babel-cli": "~6.23.0",
+    "babel-cli": "~6.24.0",
     "babel-plugin-react-transform": "^2.0.0",
     "babel-preset-react": "~6.23.0",
     "babel-register": "~6.23.0",
