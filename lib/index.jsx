@@ -9,6 +9,7 @@ var IntlProvider = ReactIntl.IntlProvider;
 var FormattedMessage  = ReactIntl.FormattedMessage;
 var TextBlockEditor = require('./TextBlockEditor');
 var IndexBlockEditor = require('./IndexBlockEditor');
+var PropTypes = require('prop-types');
 
 /**
  * @class TextBlockComponent
@@ -21,16 +22,22 @@ var IndexBlockEditor = require('./IndexBlockEditor');
  * @member {Object} block A Textblock.
  */
 
-var TextBlockComponent = React.createClass({
-  getInitialState: function() {
+class TextBlockComponent extends React.Component {
+  constructor(props) {
+    super(props);
     if (this.props.block) {
-      return this.props.block;
+      this.state = this.props.block;
     } else {
-      return {};
+      this.state = {};
     }
-  },
+    this.addText = this.addText.bind(this);
+    this.addQuery = this.addQuery.bind(this);
+    this.deleteBlock = this.deleteBlock.bind(this);
+    this.handleUpdateBase = this.handleUpdateBase.bind(this);
+    this.handleUpdate = this.handleUpdate.bind(this);
+  }
 
-  addText: function(e) {
+  addText(e) {
     e.preventDefault();
     var blocks;
     if (this.state.format === 'section') {
@@ -41,9 +48,9 @@ var TextBlockComponent = React.createClass({
     blocks.push({format: 'html', source: ''});
     this.setState({blocks: blocks,
         format: 'section'});
-  },
+  }
 
-  addQuery: function(e) {
+  addQuery(e) {
     e.preventDefault();
     var blocks;
     if (this.state.format === 'section') {
@@ -55,22 +62,22 @@ var TextBlockComponent = React.createClass({
       format:"indexfeed"});
     this.setState({blocks: blocks,
       format: 'section'});
-  },
+  }
 
- deleteBlock: function(i,e) {
+ deleteBlock(i,e) {
     e.preventDefault();
     var blocks = this.state.blocks;
     blocks.splice(i,1);
     this.setState({blocks: blocks});
-  },
+  }
 
-  handleUpdateBase: function (key, val) {
+  handleUpdateBase(key, val) {
     var partialState = {};
     partialState[key] = value;
     this.setState(partialState);
-  },
+  }
 
-  handleUpdate: function (block, key, val) {
+  handleUpdate(block, key, val) {
     var blocks;
     if (this.state.format === 'section') {
       blocks = this.state.blocks;
@@ -79,9 +86,9 @@ var TextBlockComponent = React.createClass({
     }
     blocks[block][key] = val;
     this.setState({blocks:blocks});
-  },
+  }
 
-  render: function() {
+  render() {
     var buttons;
     if (this.props.proto === 'index') {
       buttons = (<div className="pure-g-r">
@@ -139,6 +146,6 @@ var TextBlockComponent = React.createClass({
       </fieldset></IntlProvider>);
     }
   }
-});
+};
 
 exports.TextBlockComponent = TextBlockComponent;
