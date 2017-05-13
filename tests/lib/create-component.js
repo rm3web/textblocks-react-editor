@@ -3,7 +3,6 @@
 var React = require('react');
 var ReactShallowRenderer = require('react-test-renderer/shallow');
 
-
 function createComponent(component, props) {
   var shallowRenderer = new ReactShallowRenderer();
   shallowRenderer.render(React.createElement(component, props));
