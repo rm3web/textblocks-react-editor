@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.0.14] - 2017-05-17
+### Changed
+- Updated dependencies, including React 15.5.
+
 ## [0.0.13] - 2017-03-19
 ### Added
 - Delete button for textblocks
@@ -84,7 +88,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - New project
 
-[Unreleased]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.13...HEAD
+[Unreleased]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.14...HEAD
+[0.0.14]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.13...v0.0.14
 [0.0.13]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.12...v0.0.13
 [0.0.12]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.11...v0.0.12
 [0.0.11]: https://github.com/rm3web/textblocks-react-editor/compare/v0.0.10...v0.0.11
