@@ -65,7 +65,7 @@
     "mocha": "~3.3.0",
     "phantomjs-prebuilt": "^2.1.4",
     "react": "~15.5.10",
-    "react-addons-test-utils": "~15.5.10",
+    "react-addons-test-utils": "~15.5.0",
     "react-dom": "~15.5.10",
     "react-proxy": "^2.0.6",
     "react-test-renderer": "~15.5.10"
