@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.0.15] - 2018-05-02
+### Changed
+- Updated dependencies.
+- Adding node 6 and 8 support.
+
 ## [0.0.14] - 2017-05-17
 ### Changed
 - Updated dependencies, including React 15.5.
