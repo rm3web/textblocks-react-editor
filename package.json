@@ -31,7 +31,7 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "intl": "^1.2.4",
-    "prop-types": "~15.5.0",
+    "prop-types": "~15.6.2",
     "react-intl": "2.3.0",
     "react-textarea-autosize": "^4.0.2"
   },
