@@ -33,7 +33,7 @@
     "intl": "^1.2.4",
     "prop-types": "~15.5.0",
     "react-intl": "2.3.0",
-    "react-textarea-autosize": "^4.0.2"
+    "react-textarea-autosize": "^7.1.1"
   },
   "peerDependencies": {
     "react": "~0.14.7 || ~15"
